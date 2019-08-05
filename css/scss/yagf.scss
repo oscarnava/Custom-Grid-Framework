@@ -15,9 +15,9 @@
   .row {
     @include mark(green);
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat($max-cols, 1fr);
-    grid-gap: 5px;
+//    grid-template-rows: 1fr;
+    grid-template-columns: repeat($MAX-COLS, 1fr);
+//    grid-gap: 5px;
   }
 
   .col {
@@ -37,14 +37,14 @@
   @each $name, $dimension in $dimension-ranges {
     @media (min-width: $dimension) {
       content: "#{$name}";
-      @for $lt from 1 through $max-cols {
-        @for $rt from $lt through $max-cols {
+      @for $lt from 1 through $MAX-COLS {
+        @for $rt from $lt through $MAX-COLS {
           .col-#{$name}-#{$lt}-#{$rt} {
-            grid-column: #{$lt} / $rt;
+            grid-column: #{$lt} / ($rt + 1);
             grid-row: 1 / 1;
             @include mark(black) {
 //              $color: random-color();
-              $color: rgb($lt * 255 / $max-cols, $rt * 255 / $max-cols, 255 * $dim / 3);
+              $color: rgb($lt * 255 / $MAX-COLS, $rt * 255 / $MAX-COLS, 255 * $dim / 3);
               background-color: $color;
               color: if(lightness($color) < 50%, white, black);  // color: invert($color);
             }
