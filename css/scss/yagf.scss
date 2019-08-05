@@ -1,6 +1,20 @@
 @import "defs";
 @import "reset";
 
-body {
-  background-color: aquamarine;
+.yagf {
+
+    @include mark(red) {
+      min-height: 100px;
+      margin: 2px;
+    }
+
+  .row {
+    @include mark(green);
+  }
+
+  .col {
+    @include mark(blue) {
+      min-height: 100px;
+    }
+  }
 }
