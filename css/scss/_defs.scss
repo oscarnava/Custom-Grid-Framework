@@ -5,15 +5,20 @@
 @mixin mark($color: random-color()) {
   border: 2px dotted transparentize($color, 0.5);
   background-color: transparentize($color, 0.85);
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNicgaGVpZ2h0PSc2Jz4KICA8cmVjdCB3aWR0aD0nNicgaGVpZ2h0PSc2JyBmaWxsPScjZWVlZWVlJy8+CiAgPGcgaWQ9J2MnPgogICAgPHJlY3Qgd2lkdGg9JzMnIGhlaWdodD0nMycgZmlsbD0nI2U2ZTZlNicvPgogICAgPHJlY3QgeT0nMScgd2lkdGg9JzMnIGhlaWdodD0nMicgZmlsbD0nI2Q4ZDhkOCcvPgogIDwvZz4KICA8dXNlIHhsaW5rOmhyZWY9JyNjJyB4PSczJyB5PSczJy8+Cjwvc3ZnPg==");
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQYV2NkYGBogGIGEGAEEf///29gZGQESUAEoACsElkArBIADGgJguyRCM8AAAAASUVORK5CYII=");
   background-repeat: repeat;
   border-radius: 7px;
   margin: 1px;
   @content;
 }
 
-$dimension-names:  (sm,    md,    lg,     xl);
-$dimension-ranges: (576px, 768px, 1024px, 1200px);
+$max-cols: 12;
+$dimension-ranges: (
+  (sm, 576px),
+  (md, 768px),
+  (lg, 1024px),
+  (xl, 1200px)
+);
 
 /*
 @media (min-width: 576px) { ... }

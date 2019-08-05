@@ -3,13 +3,21 @@
 
 .yagf {
 
-    @include mark(red) {
-      min-height: 100px;
-      margin: 2px;
-    }
+  & > div {
+    min-height: 100px;
+  }
+
+  @include mark(red) {
+    min-height: 100px;
+    margin: 2px;
+  }
 
   .row {
     @include mark(green);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat($max-cols, 1fr);
+    grid-gap: 5px;
   }
 
   .col {
@@ -17,4 +25,47 @@
       min-height: 100px;
     }
   }
+
+  .cell {
+    font: bold 24px monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  $dim: 0;
+  @each $name, $dimension in $dimension-ranges {
+    @media (min-width: $dimension) {
+      content: "#{$name}";
+      @for $lt from 1 through $max-cols {
+        @for $rt from $lt through $max-cols {
+          .col-#{$name}-#{$lt}-#{$rt} {
+            grid-column: #{$lt} / $rt;
+            grid-row: 1 / 1;
+            @include mark(black) {
+//              $color: random-color();
+              $color: rgb($lt * 255 / $max-cols, $rt * 255 / $max-cols, 255 * $dim / 3);
+              background-color: $color;
+              color: if(lightness($color) < 50%, white, black);  // color: invert($color);
+            }
+          }
+        }
+      }
+    }
+    $dim: $dim + 1;
+  }
+
+/*
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
 }
