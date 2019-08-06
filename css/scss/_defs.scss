@@ -7,7 +7,7 @@ $MAX-COLS: 12;
 $dimension-ranges: (
   (sm, 576px),
   (md, 768px),
-  (lg, 1024px),
+  (lg, 992px),
   (xl, 1200px)
 );
 
@@ -22,11 +22,14 @@ $dimension-ranges: (
   @return rgb(random(255), random(255), random(255));
 }
 
-@mixin mark($color: random-color()) {
+@mixin mark($color: random-color(), $gradient: false, $mesh: true) {
   @if $ENABLE-MARK {
-    border: 2px dotted transparentize($color, 0.5);
+    border: 2px inset transparentize($color, 0.5);
     background-color: transparentize($color, 0.85);
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQYV2NkYGBogGIGEGAEEf///29gZGQESUAEoACsElkArBIADGgJguyRCM8AAAAASUVORK5CYII=");
+    background-image: (
+      if($mesh, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQYV2NkYGBogGIGEGAEEf///29gZGQESUAEoACsElkArBIADGgJguyRCM8AAAAASUVORK5CYII="), null),
+      if($gradient, linear-gradient($color, scale-color($color, $lightness: 50%), $color), null),
+    );
     background-repeat: repeat;
     border-radius: 7px;
     margin: 1px;

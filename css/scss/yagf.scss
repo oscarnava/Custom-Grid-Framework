@@ -1,7 +1,7 @@
 @import "defs";
 @import "reset";
 
-@include enableDebugging();
+//@include enableDebugging();
 
 .yagf {
 
@@ -28,20 +28,34 @@
     }
   }
 
+  [class*="col-"] {
+    grid-column: 1 / 13;
+    @include mark(rgba(18, 77, 103, 0.5), $gradient: true, $mesh: true) {
+      color: yellow;
+    }
+  }
+
   $dim: 0;
   @each $name, $dimension in $dimension-ranges {
-    @media (min-width: $dimension) {
+
+    @media only screen and (min-width: $dimension) {
       content: "#{$name}";
       @for $lt from 1 through $MAX-COLS {
         @for $rt from $lt through $MAX-COLS {
+          $color: rgb($lt * 255 / $MAX-COLS, $rt * 255 / $MAX-COLS, 255 * $dim / 3);
+
           .col-#{$name}-#{$lt}-#{$rt} {
             grid-column: #{$lt} / ($rt + 1);
             grid-row: 1 / 1;
-            @include mark(black) {
-//              $color: random-color();
-              $color: rgb($lt * 255 / $MAX-COLS, $rt * 255 / $MAX-COLS, 255 * $dim / 3);
+            @include mark($color, $gradient: true, $mesh: true) {
               background-color: $color;
               color: if(lightness($color) < 50%, white, black);  // color: invert($color);
+            }
+            &:hover {
+              background-image: none;
+              background-color: complement($color);
+              transition-property: background-color;
+              transition-duration: .5s;
             }
           }
         }
