@@ -1,6 +1,8 @@
 @import "defs";
 @import "reset";
 
+@include enableDebugging();
+
 .yagf {
 
   & > div {
@@ -15,8 +17,8 @@
   .row {
     @include mark(green);
     display: grid;
-//    grid-template-rows: 1fr;
     grid-template-columns: repeat($MAX-COLS, 1fr);
+//    grid-template-rows: 1fr;
 //    grid-gap: 5px;
   }
 
@@ -24,13 +26,6 @@
     @include mark(blue) {
       min-height: 100px;
     }
-  }
-
-  .cell {
-    font: bold 24px monospace;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   $dim: 0;

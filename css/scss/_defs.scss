@@ -2,7 +2,7 @@
   Global variables
 **/
 
-$ENABLE-MARK: true;
+$ENABLE-MARK: false;
 $MAX-COLS: 12;
 $dimension-ranges: (
   (sm, 576px),
@@ -12,8 +12,11 @@ $dimension-ranges: (
 );
 
 /**
-  Global functions
+  Global functions & mixins
 **/
+@mixin enableDebugging() {
+  $ENABLE-MARK: true !global;
+}
 
 @function random-color() {
   @return rgb(random(255), random(255), random(255));
