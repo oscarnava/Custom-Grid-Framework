@@ -1,7 +1,7 @@
 @import "defs";
 @import "reset";
 
-//@include enableDebugging();
+@include enableDebugging();
 
 .yagf {
 
@@ -31,6 +31,7 @@
   [class*="col-"] {
     grid-column: 1 / 13;
     @include mark(rgba(18, 77, 103, 0.5), $gradient: true, $mesh: true) {
+      background-color: rgba(18, 77, 103, 0.5);
       color: yellow;
     }
   }
