@@ -1,51 +1,65 @@
 /**
-  Global variables
+* Global definitions
 **/
 
-$ENABLE-MARK: false;
-$MAX-COLS: 12;
-$dimension-ranges: (
-  (sm, 576px),
-  (md, 768px),
-  (lg, 992px),
-  (xl, 1200px)
+$DEBUG: false;        // Enable or disable debug display.
+$ENABLE-MARK: false;  // Enable or disable the display of a dotted line on the elements which use the 'mark' mixin.
+$MAX-COLS: 12;        // Maximum number of columns enabled for bootstrap mode.
+
+/*
+*   Requirements:
+*     + Breakpoint for small screens with a width of up to 720px
+*     + Breakpoint for medium screens with a width in the range of 720px - 1024px
+*     + Breakpoint for large screens with width above 1024px
+*/
+
+$DIMENSION-RANGES: (
+  (md,  720px),
+  (lg, 1024px)
 );
 
 /**
-  Global functions & mixins
+* Global functions & mixins
 **/
+
+/*
+* This mixin will just enable or disable some features when debugging; those
+* features should be disabled by default
+*/
 @mixin enableDebugging() {
+  $DEBUG: true !global;
   $ENABLE-MARK: true !global;
 }
+
+/// Simple function to generate a random color.
+///
+/// @param none
+///
+/// @return {Color} - A random generated color
 
 @function random-color() {
   @return rgb(random(255), random(255), random(255));
 }
 
+/// Mixin to generate some display attributes that will aid on design
+///
+/// @param {Color}   $color - The color to be used for the border and background. Default: Random color.
+/// @param {Boolean} $gradient - Should fill the cell with a gradient?
+/// @param {Boolean} $mesh - Should fill the cell with a mesh?
+
 @mixin mark($color: random-color(), $gradient: false, $mesh: true) {
   @if $ENABLE-MARK {
-    border: 2px inset transparentize($color, 0.5);
-    background-color: transparentize($color, 0.85);
+    border: 2px inset transparentize($color, 0.5) !important;
+    background-color: transparentize($color, 0.85) !important;
     background-image: (
       if($mesh, url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQYV2NkYGBogGIGEGAEEf///29gZGQESUAEoACsElkArBIADGgJguyRCM8AAAAASUVORK5CYII="), null),
       if($gradient, linear-gradient($color, scale-color($color, $lightness: 50%), $color), null),
-    );
-    background-repeat: repeat;
-    border-radius: 7px;
-    margin: 1px;
+    ) !important;
+    background-repeat: repeat !important;
+    border-radius: 7px !important;
+    margin: 1px !important;
   }
-  @content;
+  @if $DEBUG {
+    @content;
+  }
 }
-
-/*
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/

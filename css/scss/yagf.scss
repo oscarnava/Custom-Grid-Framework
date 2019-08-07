@@ -5,8 +5,10 @@
 
 .yagf {
 
-  & > div {
-    min-height: 100px;
+  @if DEBUG {
+    & > div {
+      min-height: 100px;
+    }
   }
 
   @include mark(red) {
@@ -18,64 +20,18 @@
     @include mark(green);
     display: grid;
     grid-template-columns: repeat($MAX-COLS, 1fr);
-//    grid-template-rows: 1fr;
-//    grid-gap: 5px;
-  }
-
-  .col {
-    @include mark(blue) {
-      min-height: 100px;
-    }
+    grid-gap: 0;
   }
 
   [class*="col-"] {
-    grid-column: 1 / 13;
+    grid-column: 1 / span $MAX-COLS;
     @include mark(rgba(18, 77, 103, 0.5), $gradient: true, $mesh: true) {
       background-color: rgba(18, 77, 103, 0.5);
       color: yellow;
     }
   }
 
-  $dim: 0;
-  @each $name, $dimension in $dimension-ranges {
-
-    @media only screen and (min-width: $dimension) {
-      content: "#{$name}";
-      @for $lt from 1 through $MAX-COLS {
-        @for $rt from $lt through $MAX-COLS {
-          $color: rgb($lt * 255 / $MAX-COLS, $rt * 255 / $MAX-COLS, 255 * $dim / 3);
-
-          .col-#{$name}-#{$lt}-#{$rt} {
-            grid-column: #{$lt} / ($rt + 1);
-            grid-row: 1 / 1;
-            @include mark($color, $gradient: true, $mesh: true) {
-              background-color: $color;
-              color: if(lightness($color) < 50%, white, black);  // color: invert($color);
-            }
-            &:hover {
-              background-image: none;
-              background-color: complement($color);
-              transition-property: background-color;
-              transition-duration: .5s;
-            }
-          }
-        }
-      }
-    }
-    $dim: $dim + 1;
-  }
-
-/*
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
+  // Include Bootstrap style rules.
+  @import 'bootstrap-ish';
 
 }
