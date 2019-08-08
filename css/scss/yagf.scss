@@ -1,7 +1,7 @@
 @import "defs";
 @import "reset";
 
-@include enableDebugging();
+//@include enableDebugging();
 
 .yagf {
 
@@ -27,7 +27,7 @@
     @include mark(green);
     display: grid;
     grid-template-columns: repeat($GRID-MAX-COLS, 1fr);
-    grid-template-rows: repeat(length($ROWS), 1fr);
+    grid-template-rows: repeat(length($ROWS), auto);
     grid-gap: 0;
   }
 
@@ -40,6 +40,7 @@
       color: yellow;
     }
   }
+
   [class*="range-"] {
     grid-column: 1 / span $GRID-MAX-COLS;
     @include mark(rgba(18, 77, 103, 0.5), $gradient: true, $mesh: true) {
