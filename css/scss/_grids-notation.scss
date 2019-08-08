@@ -1,18 +1,11 @@
 /*******************************************************
  *   Generate rules for a Bootstrap style behaviour.
  ******************************************************/
- $dimIndex: 0; // This will be a numeric index of the dimension. Used only for color generation.
+
  @each $name, $dimension in $DIMENSION-RANGES {
-   // Generate rules for each dimension range
+
   @media only screen and (min-width: $dimension) {
-     // Generate rules for each column pair. Notation is:
-     //
-     //   col-{dim}-{from}-{to}
-     //
-     // Where:
-     //   dim : Is the dimension name (i.e.: sm, md, lg, xl)
-     //   from: Is the starting column index (numeric, from 1 to $MAX-COLS inclusive).
-     //   to  : Is the ending column index (numeric, from 'from' value to $MAX-COLS inclusive).
+
     @for $top from 1 through length($ROWS) {
       @for $left from 1 through $GRID-MAX-COLS {
         @for $bottom from $top through length($ROWS) {
@@ -28,5 +21,5 @@
       }
     }
     }
-   $dimIndex: $dimIndex + 1;
+
 }
