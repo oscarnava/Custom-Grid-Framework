@@ -18,6 +18,11 @@ $DIMENSION-RANGES: (
   (lg, 1024px)
 );
 
+/*grid notation variables and constants*/
+
+$ROWS: (a,b,c);
+$GRID-MAX-COLS: 6;
+
 /**
 * Global functions & mixins
 **/
