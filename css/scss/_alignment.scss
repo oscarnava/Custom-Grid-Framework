@@ -1,0 +1,34 @@
+$FLEX_HORIZONTAL_POSITIONING: (
+    (left, flex-start), 
+    (hcenter, center), 
+    (right, flex-end)
+);
+$FLEX_VERTICAL_POSITIONING: (
+    (top, flex-start), 
+    (vcenter, center), 
+    (bottom, flex-end)
+);
+
+
+
+@each $name, $dimension in $DIMENSION-RANGES {
+  @media only screen and (min-width: $dimension) {
+        @each $selector_name, $value in $FLEX_VERTICAL_POSITIONING {
+
+            .align-#{$name}-#{$selector_name} {
+                align-items: $value;
+            }
+
+
+        }    
+         @each $selector_name, $value in $FLEX_HORIZONTAL_POSITIONING {
+            .align-#{$name}-#{$selector_name} {
+                justify-content: $value;
+            }
+
+                   
+        }
+                    
+               
+    }
+}

@@ -16,15 +16,6 @@
 * This mixin will just enable or disable some features when debugging; those
 * features should be disabled by default
 */
-.yagf {
-  /*
-  For display should have a class for each
-    A class to set the display property of an element to flex
-    A class to set the display property to hidden
-    A class to set the display property to none
-    The none class should have breakpoints (example display-md-none)
-  */
-}
 .yagf > div {
   min-height: 100px;
 }
@@ -46,28 +37,66 @@
   grid-column: 1/span 6;
 }
 @media only screen and (min-width: 720px) {
-  .yagf .display-md-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .yagf .align-md-top {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-  .yagf .display-md-hidden {
-    display: hidden;
+  .yagf .align-md-vcenter {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .yagf .display-md-none {
-    display: none;
+  .yagf .align-md-bottom {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .yagf .align-md-left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .yagf .align-md-hcenter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .yagf .align-md-right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .yagf .display-lg-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .yagf .align-lg-top {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-  .yagf .display-lg-hidden {
-    display: hidden;
+  .yagf .align-lg-vcenter {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .yagf .display-lg-none {
-    display: none;
+  .yagf .align-lg-bottom {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .yagf .align-lg-left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .yagf .align-lg-hcenter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .yagf .align-lg-right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
