@@ -1,0 +1,25 @@
+/*******************************************************
+ *   Generate rules for a Bootstrap style behaviour.
+ ******************************************************/
+
+ @each $name, $dimension in $DIMENSION-RANGES {
+
+  @media only screen and (min-width: $dimension) {
+
+    @for $top from 1 through length($ROWS) {
+      @for $left from 1 through $GRID-MAX-COLS {
+        @for $bottom from $top through length($ROWS) {
+          @for $right from $left through $GRID-MAX-COLS {
+            $top-name: nth($ROWS,$top);
+            $bottom-name: nth($ROWS,$bottom);
+            .range-#{$name}-#{$top-name}#{$left}-#{$bottom-name}#{$right} {
+              grid-column: #{$left}/#{$right + 1};
+              grid-row: #{$top}/#{$bottom + 1};
+            }
+          }
+        }
+      }
+    }
+    }
+
+}
