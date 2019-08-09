@@ -1,0 +1,19 @@
+$PADDINGS: ('top','right','bottom','left');
+$SPANS: ('auto', 0, 1rem);
+
+@each $name, $dimension in $DIMENSION-RANGES {
+
+    // Generate rules for each dimension range
+    @media only screen and (min-width: $dimension) {
+        @each $span in $SPANS {
+            .padding-#{$name}-#{$span} {
+                padding: #{$span}
+            }
+            @each $padding in $PADDINGS {
+                .padding-#{$name}-#{$padding}-#{$span} {
+                    padding-#{$padding}: #{$span}
+                }
+            }
+        }
+    }
+}
