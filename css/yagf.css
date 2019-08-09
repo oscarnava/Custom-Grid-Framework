@@ -37,198 +37,108 @@
   grid-column: 1/span 6;
 }
 @media only screen and (min-width: 720px) {
-  .yagf .bgcolor-md-aqua {
-    background-color: aqua;
+  .yagf .align-md-left {
+    text-align: left;
   }
-  .yagf .txtcolor-md-aqua {
-    color: aqua;
+  .yagf .align-md-center {
+    text-align: center;
   }
-  .yagf .bgcolor-md-black {
-    background-color: black;
+  .yagf .align-md-right {
+    text-align: right;
   }
-  .yagf .txtcolor-md-black {
-    color: black;
+  .yagf .fweight-md-bold {
+    font-weight: 700;
   }
-  .yagf .bgcolor-md-blue {
-    background-color: blue;
+  .yagf .fweight-md-normal {
+    font-weight: 400;
   }
-  .yagf .txtcolor-md-blue {
-    color: blue;
+  .yagf .fweight-md-medium {
+    font-weight: 500;
   }
-  .yagf .bgcolor-md-fuchsia {
-    background-color: fuchsia;
+  .yagf .fsize-md-10px {
+    font-size: 10px;
   }
-  .yagf .txtcolor-md-fuchsia {
-    color: fuchsia;
+  .yagf .fsize-md-12px {
+    font-size: 12px;
   }
-  .yagf .bgcolor-md-gray {
-    background-color: gray;
+  .yagf .fsize-md-14px {
+    font-size: 14px;
   }
-  .yagf .txtcolor-md-gray {
-    color: gray;
+  .yagf .fsize-md-16px {
+    font-size: 16px;
   }
-  .yagf .bgcolor-md-green {
-    background-color: green;
+  .yagf .fsize-md-18px {
+    font-size: 18px;
   }
-  .yagf .txtcolor-md-green {
-    color: green;
+  .yagf .fsize-md-20px {
+    font-size: 20px;
   }
-  .yagf .bgcolor-md-lime {
-    background-color: lime;
+  .yagf .fsize-md-22px {
+    font-size: 22px;
   }
-  .yagf .txtcolor-md-lime {
-    color: lime;
+  .yagf .fsize-md-24px {
+    font-size: 24px;
   }
-  .yagf .bgcolor-md-maroon {
-    background-color: maroon;
+  .yagf .fsize-md-26px {
+    font-size: 26px;
   }
-  .yagf .txtcolor-md-maroon {
-    color: maroon;
+  .yagf .fsize-md-28px {
+    font-size: 28px;
   }
-  .yagf .bgcolor-md-navy {
-    background-color: navy;
-  }
-  .yagf .txtcolor-md-navy {
-    color: navy;
-  }
-  .yagf .bgcolor-md-olive {
-    background-color: olive;
-  }
-  .yagf .txtcolor-md-olive {
-    color: olive;
-  }
-  .yagf .bgcolor-md-purple {
-    background-color: purple;
-  }
-  .yagf .txtcolor-md-purple {
-    color: purple;
-  }
-  .yagf .bgcolor-md-red {
-    background-color: red;
-  }
-  .yagf .txtcolor-md-red {
-    color: red;
-  }
-  .yagf .bgcolor-md-silver {
-    background-color: silver;
-  }
-  .yagf .txtcolor-md-silver {
-    color: silver;
-  }
-  .yagf .bgcolor-md-teal {
-    background-color: teal;
-  }
-  .yagf .txtcolor-md-teal {
-    color: teal;
-  }
-  .yagf .bgcolor-md-white {
-    background-color: white;
-  }
-  .yagf .txtcolor-md-white {
-    color: white;
-  }
-  .yagf .bgcolor-md-yellow {
-    background-color: yellow;
-  }
-  .yagf .txtcolor-md-yellow {
-    color: yellow;
+  .yagf .fsize-md-30px {
+    font-size: 30px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .yagf .bgcolor-lg-aqua {
-    background-color: aqua;
+  .yagf .align-lg-left {
+    text-align: left;
   }
-  .yagf .txtcolor-lg-aqua {
-    color: aqua;
+  .yagf .align-lg-center {
+    text-align: center;
   }
-  .yagf .bgcolor-lg-black {
-    background-color: black;
+  .yagf .align-lg-right {
+    text-align: right;
   }
-  .yagf .txtcolor-lg-black {
-    color: black;
+  .yagf .fweight-lg-bold {
+    font-weight: 700;
   }
-  .yagf .bgcolor-lg-blue {
-    background-color: blue;
+  .yagf .fweight-lg-normal {
+    font-weight: 400;
   }
-  .yagf .txtcolor-lg-blue {
-    color: blue;
+  .yagf .fweight-lg-medium {
+    font-weight: 500;
   }
-  .yagf .bgcolor-lg-fuchsia {
-    background-color: fuchsia;
+  .yagf .fsize-lg-10px {
+    font-size: 10px;
   }
-  .yagf .txtcolor-lg-fuchsia {
-    color: fuchsia;
+  .yagf .fsize-lg-12px {
+    font-size: 12px;
   }
-  .yagf .bgcolor-lg-gray {
-    background-color: gray;
+  .yagf .fsize-lg-14px {
+    font-size: 14px;
   }
-  .yagf .txtcolor-lg-gray {
-    color: gray;
+  .yagf .fsize-lg-16px {
+    font-size: 16px;
   }
-  .yagf .bgcolor-lg-green {
-    background-color: green;
+  .yagf .fsize-lg-18px {
+    font-size: 18px;
   }
-  .yagf .txtcolor-lg-green {
-    color: green;
+  .yagf .fsize-lg-20px {
+    font-size: 20px;
   }
-  .yagf .bgcolor-lg-lime {
-    background-color: lime;
+  .yagf .fsize-lg-22px {
+    font-size: 22px;
   }
-  .yagf .txtcolor-lg-lime {
-    color: lime;
+  .yagf .fsize-lg-24px {
+    font-size: 24px;
   }
-  .yagf .bgcolor-lg-maroon {
-    background-color: maroon;
+  .yagf .fsize-lg-26px {
+    font-size: 26px;
   }
-  .yagf .txtcolor-lg-maroon {
-    color: maroon;
+  .yagf .fsize-lg-28px {
+    font-size: 28px;
   }
-  .yagf .bgcolor-lg-navy {
-    background-color: navy;
-  }
-  .yagf .txtcolor-lg-navy {
-    color: navy;
-  }
-  .yagf .bgcolor-lg-olive {
-    background-color: olive;
-  }
-  .yagf .txtcolor-lg-olive {
-    color: olive;
-  }
-  .yagf .bgcolor-lg-purple {
-    background-color: purple;
-  }
-  .yagf .txtcolor-lg-purple {
-    color: purple;
-  }
-  .yagf .bgcolor-lg-red {
-    background-color: red;
-  }
-  .yagf .txtcolor-lg-red {
-    color: red;
-  }
-  .yagf .bgcolor-lg-silver {
-    background-color: silver;
-  }
-  .yagf .txtcolor-lg-silver {
-    color: silver;
-  }
-  .yagf .bgcolor-lg-teal {
-    background-color: teal;
-  }
-  .yagf .txtcolor-lg-teal {
-    color: teal;
-  }
-  .yagf .bgcolor-lg-white {
-    background-color: white;
-  }
-  .yagf .txtcolor-lg-white {
-    color: white;
-  }
-  .yagf .bgcolor-lg-yellow {
-    background-color: yellow;
-  }
-  .yagf .txtcolor-lg-yellow {
-    color: yellow;
+  .yagf .fsize-lg-30px {
+    font-size: 30px;
   }
 }

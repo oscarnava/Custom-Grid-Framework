@@ -15,14 +15,14 @@ $FLEX_VERTICAL_POSITIONING: (
   @media only screen and (min-width: $dimension) {
         @each $selector_name, $value in $FLEX_VERTICAL_POSITIONING {
 
-            .align-#{$name}-#{$selector_name} {
+            .position-#{$name}-#{$selector_name} {
                 align-items: $value;
             }
 
 
         }    
          @each $selector_name, $value in $FLEX_HORIZONTAL_POSITIONING {
-            .align-#{$name}-#{$selector_name} {
+            .position-#{$name}-#{$selector_name} {
                 justify-content: $value;
             }
 
