@@ -4,17 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yet another grid framework demo</title>
+  <link rel="stylesheet" href="css/personalization.css">
   <link rel="stylesheet" href="css/yagf.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <main>
-    <h1>YAGF (Yet Another Grid Framework) demo</h1>
-    <h2>by Nico &amp; Oscar, the "Dream Team" :-)</h2>
-    <p>
+    <h1 class="fsize-md-24px fsize-lg-30px fweight-md-bold fweight-lg-medium align-md-left align-lg-right" >YAGF (Yet Another Grid Framework) demo</h1>
+    <h2 class="fsize-md-14px fsize-lg-20px align-md-left align-lg-right">by Nico &amp; Oscar, the "Dream Team" :-)</h2>
+    <p class="display-md-none">
       This framework has two different modes:
     </p>
-    <p>
+    <p class="padding-md-1rem padding-lg-10px">
       <strong>Bootstrap mode:</strong>
       In this mode, the layout will mimic the behaviour of Bootstrap, using selectors
       similar to that framework, but with the variant that you select the starting
@@ -23,8 +24,8 @@
 
     <div class="yagf">
       <div class="row">
-        <div class="cell size-cell col-md-1-10  col-lg-1-2 ">Medium</div>
-        <div class="cell size-cell col-md-11-12 col-lg-3-12">Large</div>
+        <div class="cell display-lg-none size-cell col-md-1-12">Medium</div>
+        <div class="cell display-md-none size-cell col-lg-1-12">Large</div>
       </div>
       <div class="row">
         <div class="cell col-lg-9-12 col-md-2-3"><img src="img/1f607.png" alt=""></div>
@@ -36,11 +37,11 @@
         <div class="cell cell2 col-md-2-2 col-lg-3-3">2</div>
         <div class="cell cell3 col-md-3-3 col-lg-2-2">3</div>
         <div class="cell cell4 col-md-4-4 col-lg-1-1">4</div>
-        <div class="cell col-md-5-5">5</div>
-        <div class="cell col-md-6-6">6</div>
-        <div class="cell col-md-7-7">7</div>
-        <div class="cell col-md-8-8">8</div>
-        <div class="cell col-md-9-9">9</div>
+        <div class="cell col-md-5-5 bgcolor-md-maroon txtcolor-md-yellow bgcolor-lg-blue txtcolor-lg-white">5</div>
+        <div class="cell col-md-6-6 bgcolor-md-maroon txtcolor-md-yellow bgcolor-lg-blue txtcolor-lg-white">6</div>
+        <div class="cell col-md-7-7 bgcolor-md-maroon txtcolor-md-yellow bgcolor-lg-blue txtcolor-lg-white">7</div>
+        <div class="cell col-md-8-8 bgcolor-md-maroon txtcolor-md-yellow bgcolor-lg-blue txtcolor-lg-white">8</div>
+        <div class="cell col-md-9-9 bgcolor-md-maroon txtcolor-md-yellow bgcolor-lg-blue txtcolor-lg-white">9</div>
         <div class="cell col-md-10-10">10</div>
         <div class="cell col-md-11-11">11</div>
         <div class="cell col-md-12-12">12</div>
@@ -59,11 +60,13 @@
         <div class="cell range-lg-a1-a1 range-md-c6-c6"><img class="logo" src="img/logo.jpg" alt=""></div>
         <nav class="demo-head cell range-lg-a2-a6">I am the header</nav>
         <div class="demo-body grid-mode range-lg-b1-b6">
-          <aside  class="cell range-lg-a1-b1 range-md-a6-a6">I am an aside</aside>
-          <div    class="cell range-lg-c1-c1 range-md-a1-a1"><img src="img/1f607.png" alt=""></div>
-          <div    class="cell range-lg-a2-c5 range-md-a2-c5">I am the body </div>
-          <div    class="cell range-lg-a6-a6 range-md-c1-c1"><img src="img/1f92a.png" alt=""></div>
-          <aside  class="cell range-lg-b6-c6 range-md-c6-c6">I am another aside</aside>
+          <aside class="cell range-lg-a1-b1 range-md-a6-a6">I am an aside</aside>
+          <div class="cell range-lg-c1-c1 range-md-a1-a1"><img src="img/1f607.png" alt=""></div>
+          <div class="range-lg-a2-c5 range-md-a2-c5 display-lg-flex display-md-flex position-lg-top position-md-bottom position-lg-hcenter position-md-hcenter">
+            <div class="fsize-md-24px fsize-lg-30px">I am the body</div>
+          </div>
+          <div class="cell range-lg-a6-a6 range-md-c1-c1"><img src="img/1f92a.png" alt=""></div>
+          <aside class="cell range-lg-b6-c6 range-md-c6-c6">I am another aside</aside>
         </div>
         <footer class="demo-foot cell range-lg-c1-c6 range-md-c1-c5">I am the footer</footer>
       </div>

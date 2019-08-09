@@ -14,21 +14,46 @@ $MAX-COLS: 12;        // Maximum number of columns enabled for bootstrap mode.
 */
 
 $DIMENSION-RANGES: (
-  (md,  720px),
-  (lg, 1024px)
-//  (md,  400px),
-//  (lg, 800px)
+//  (md,  720px,  1023px),
+//  (lg, 1024px, 99999px)
+  (md, 400px,  799px),
+  (lg, 800px, 9999px)
 );
 
 /*grid notation variables and constants*/
 
-$ROWS: (a,b,c);
+$ROWS: (a,b,c,d);
 $GRID-MAX-COLS: 6;
 
 /* Padding parameters */
 
 $PADDINGS: ('top','right','bottom','left');
-$SPANS: ('auto', 0, 1rem, 1em, 10px);
+$SPANS: (0, 1rem, 1em, 10px);
+
+/* Border parameters */
+$BORDER-DIRS: (top, right, bottom, left);
+
+/* Colors parameters */
+$COLORS: (aqua,  black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, yellow);
+
+/* Alignment parameters */
+$FLEX_HORIZONTAL_POSITIONING: (
+    (left, flex-start),
+    (hcenter, center),
+    (right, flex-end)
+);
+
+$FLEX_VERTICAL_POSITIONING: (
+    (top, flex-start),
+    (vcenter, center),
+    (bottom, flex-end)
+);
+
+/* Display parameters */
+$DISPLAYS: (flex, contents, none);
+
+/* Utilities parameters */
+$FONT_SIZES: (10px,12px,14px,16px,18px,20px,22px,24px,26px,28px,30px);
 
 /**
 * Global functions & mixins

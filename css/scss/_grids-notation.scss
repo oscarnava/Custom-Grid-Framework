@@ -2,9 +2,10 @@
  *   Generate rules for a Bootstrap style behaviour.
  ******************************************************/
 
- @each $name, $dimension in $DIMENSION-RANGES {
+@each $name, $dimension-min, $dimension-max in $DIMENSION-RANGES {
 
-  @media only screen and (min-width: $dimension) {
+  // Generate rules for each dimension range
+  @media only screen and (min-width: $dimension-min) {
 
     @for $top from 1 through length($ROWS) {
       @for $left from 1 through $GRID-MAX-COLS {
@@ -20,6 +21,5 @@
         }
       }
     }
-    }
-
+  }
 }

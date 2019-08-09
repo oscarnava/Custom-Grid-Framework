@@ -1,5 +1,4 @@
 @import "defs";
-//@import "reset";
 
 //@include enableDebugging();
 
@@ -50,11 +49,7 @@
   }
 
   // Include Bootstrap style rules.
-//@import 'bootstrap-ish';
-//@import 'grids-notation';
-//@import 'padding';
-//@import 'display';
-//@import 'alignment';
-//  @import 'colors';
-@import 'utilities';
+  @import 'bootstrap-ish';
+  @import 'grids-notation';
+
 }

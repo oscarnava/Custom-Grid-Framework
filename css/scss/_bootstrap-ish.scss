@@ -3,10 +3,10 @@
  ******************************************************/
 
 $dimIndex: 0; // This will be a numeric index of the dimension. Used only for color generation.
-@each $name, $dimension in $DIMENSION-RANGES {
+@each $name, $dimension-min, $dimension-max in $DIMENSION-RANGES {
 
   // Generate rules for each dimension range
-  @media only screen and (min-width: $dimension) {
+  @media only screen and (min-width: $dimension-min) {
 
     // Generate rules for each column pair. Notation is:
     //

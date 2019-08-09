@@ -1,34 +1,15 @@
-$FLEX_HORIZONTAL_POSITIONING: (
-    (left, flex-start), 
-    (hcenter, center), 
-    (right, flex-end)
-);
-$FLEX_VERTICAL_POSITIONING: (
-    (top, flex-start), 
-    (vcenter, center), 
-    (bottom, flex-end)
-);
+@each $name, $dimension-min, $dimension-max in $DIMENSION-RANGES {
+  @media only screen and (min-width: $dimension-min) and (max-width: $dimension-max) {
+    @each $selector_name, $value in $FLEX_VERTICAL_POSITIONING {
 
-
-
-@each $name, $dimension in $DIMENSION-RANGES {
-  @media only screen and (min-width: $dimension) {
-        @each $selector_name, $value in $FLEX_VERTICAL_POSITIONING {
-
-            .position-#{$name}-#{$selector_name} {
-                align-items: $value;
-            }
-
-
-        }    
-         @each $selector_name, $value in $FLEX_HORIZONTAL_POSITIONING {
-            .position-#{$name}-#{$selector_name} {
-                justify-content: $value;
-            }
-
-                   
-        }
-                    
-               
+      .position-#{$name}-#{$selector_name} {
+          align-items: $value;
+      }
     }
+    @each $selector_name, $value in $FLEX_HORIZONTAL_POSITIONING {
+      .position-#{$name}-#{$selector_name} {
+          justify-content: $value;
+      }
+    }
+  }
 }
