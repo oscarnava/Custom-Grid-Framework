@@ -69,7 +69,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@media only screen and (min-width: 400px) and (max-width: 799px) {
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
   .padding-md-0 {
     padding: 0; }
 
@@ -129,7 +129,7 @@ table {
 
   .padding-md-left-10px {
     padding-left: 10px; } }
-@media only screen and (min-width: 800px) and (max-width: 9999px) {
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
   .padding-lg-0 {
     padding: 0; }
 
@@ -196,7 +196,7 @@ For display should have a class for each
   A class to set the display property to none
   The none class should have breakpoints (example display-md-none)
 */
-@media only screen and (min-width: 400px) and (max-width: 799px) {
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
   .display-md-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -207,7 +207,7 @@ For display should have a class for each
 
   .display-md-none {
     display: none; } }
-@media only screen and (min-width: 800px) and (max-width: 9999px) {
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
   .display-lg-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -218,7 +218,7 @@ For display should have a class for each
 
   .display-lg-none {
     display: none; } }
-@media only screen and (min-width: 400px) and (max-width: 799px) {
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
   .position-md-top {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -248,7 +248,7 @@ For display should have a class for each
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; } }
-@media only screen and (min-width: 800px) and (max-width: 9999px) {
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
   .position-lg-top {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -278,7 +278,7 @@ For display should have a class for each
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; } }
-@media only screen and (min-width: 400px) and (max-width: 799px) {
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
   .bgcolor-md-aqua {
     background-color: aqua; }
 
@@ -422,7 +422,7 @@ For display should have a class for each
 
   .border-color-md-yellow {
     border-color: yellow; } }
-@media only screen and (min-width: 800px) and (max-width: 9999px) {
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
   .bgcolor-lg-aqua {
     background-color: aqua; }
 
@@ -566,7 +566,7 @@ For display should have a class for each
 
   .border-color-lg-yellow {
     border-color: yellow; } }
-@media only screen and (min-width: 400px) and (max-width: 799px) {
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
   .align-md-left {
     text-align: left; }
 
@@ -617,7 +617,7 @@ For display should have a class for each
 
   .fsize-md-30px {
     font-size: 30px; } }
-@media only screen and (min-width: 800px) and (max-width: 9999px) {
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
   .align-lg-left {
     text-align: left; }
 
@@ -668,7 +668,7 @@ For display should have a class for each
 
   .fsize-lg-30px {
     font-size: 30px; } }
-@media only screen and (min-width: 400px) and (max-width: 799px) {
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
   .border-md-0rem {
     border-width: 0rem;
     border-style: solid; }
@@ -738,7 +738,7 @@ For display should have a class for each
 
   .circle-md {
     border-radius: 50%; } }
-@media only screen and (min-width: 800px) and (max-width: 9999px) {
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
   .border-lg-0rem {
     border-width: 0rem;
     border-style: solid; }

@@ -14,10 +14,10 @@ $MAX-COLS: 12;        // Maximum number of columns enabled for bootstrap mode.
 */
 
 $DIMENSION-RANGES: (
-//  (md,  720px,  1023px),
-//  (lg, 1024px, 99999px)
-  (md, 400px,  799px),
-  (lg, 800px, 9999px)
+  (md,  720px,  1023px),
+  (lg, 1024px, 99999px)
+//  (md, 400px,  799px),
+//  (lg, 800px, 9999px)
 );
 
 /*grid notation variables and constants*/
