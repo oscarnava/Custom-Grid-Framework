@@ -11,14 +11,14 @@
 
     @for $width from 0rem through 1rem {
 
-      .border-#{$name} {
+      .border-#{$name}-#{$width} {
         border-width: $width;
         border-style: solid;
       }
 
       @each $direction in $BORDER-DIRS {
 
-        .border-#{$name}-#{$direction} {
+        .border-#{$name}-#{$direction}-#{$width} {
           border-#{$direction}-width: $width;
           border-#{$direction}-style: solid;
         }

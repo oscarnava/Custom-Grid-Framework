@@ -669,43 +669,43 @@ For display should have a class for each
   .fsize-lg-30px {
     font-size: 30px; } }
 @media only screen and (min-width: 400px) and (max-width: 799px) {
-  .border-md {
+  .border-md-0rem {
     border-width: 0rem;
     border-style: solid; }
 
-  .border-md-top {
+  .border-md-top-0rem {
     border-top-width: 0rem;
     border-top-style: solid; }
 
-  .border-md-right {
+  .border-md-right-0rem {
     border-right-width: 0rem;
     border-right-style: solid; }
 
-  .border-md-bottom {
+  .border-md-bottom-0rem {
     border-bottom-width: 0rem;
     border-bottom-style: solid; }
 
-  .border-md-left {
+  .border-md-left-0rem {
     border-left-width: 0rem;
     border-left-style: solid; }
 
-  .border-md {
+  .border-md-1rem {
     border-width: 1rem;
     border-style: solid; }
 
-  .border-md-top {
+  .border-md-top-1rem {
     border-top-width: 1rem;
     border-top-style: solid; }
 
-  .border-md-right {
+  .border-md-right-1rem {
     border-right-width: 1rem;
     border-right-style: solid; }
 
-  .border-md-bottom {
+  .border-md-bottom-1rem {
     border-bottom-width: 1rem;
     border-bottom-style: solid; }
 
-  .border-md-left {
+  .border-md-left-1rem {
     border-left-width: 1rem;
     border-left-style: solid; }
 
@@ -739,43 +739,43 @@ For display should have a class for each
   .circle-md {
     border-radius: 50%; } }
 @media only screen and (min-width: 800px) and (max-width: 9999px) {
-  .border-lg {
+  .border-lg-0rem {
     border-width: 0rem;
     border-style: solid; }
 
-  .border-lg-top {
+  .border-lg-top-0rem {
     border-top-width: 0rem;
     border-top-style: solid; }
 
-  .border-lg-right {
+  .border-lg-right-0rem {
     border-right-width: 0rem;
     border-right-style: solid; }
 
-  .border-lg-bottom {
+  .border-lg-bottom-0rem {
     border-bottom-width: 0rem;
     border-bottom-style: solid; }
 
-  .border-lg-left {
+  .border-lg-left-0rem {
     border-left-width: 0rem;
     border-left-style: solid; }
 
-  .border-lg {
+  .border-lg-1rem {
     border-width: 1rem;
     border-style: solid; }
 
-  .border-lg-top {
+  .border-lg-top-1rem {
     border-top-width: 1rem;
     border-top-style: solid; }
 
-  .border-lg-right {
+  .border-lg-right-1rem {
     border-right-width: 1rem;
     border-right-style: solid; }
 
-  .border-lg-bottom {
+  .border-lg-bottom-1rem {
     border-bottom-width: 1rem;
     border-bottom-style: solid; }
 
-  .border-lg-left {
+  .border-lg-left-1rem {
     border-left-width: 1rem;
     border-left-style: solid; }
 

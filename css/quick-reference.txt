@@ -6,6 +6,7 @@ Borders:
   .border-{md|lg}-{top|right|bottom|left}
   .round-box-{md|lg}-{2px|3px|...|10px}
   .circle-{md|lg}
+  .border-{md|lg}-{0rem|1rem}
 
 Colors:
 * .bgcolor-{md|lg}-{aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|purple|red|silver|teal|white|yellow}
