@@ -8,6 +8,7 @@
 *     + Breakpoint for large screens with width above 1024px
 */
 /*grid notation variables and constants*/
+/* Padding parameters */
 /**
 * Global functions & mixins
 **/
@@ -15,61 +16,15 @@
 * This mixin will just enable or disable some features when debugging; those
 * features should be disabled by default
 */
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+.yagf {
+  /*
+  For display should have a class for each
+    A class to set the display property of an element to flex
+    A class to set the display property to hidden
+    A class to set the display property to none
+    The none class should have breakpoints (example display-md-none)
+  */
 }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 .yagf > div {
   min-height: 100px;
 }
@@ -91,96 +46,28 @@ table {
   grid-column: 1/span 6;
 }
 @media only screen and (min-width: 720px) {
-  .yagf .padding-md-auto {
-    padding: auto;
+  .yagf .display-md-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .yagf .padding-md-top-auto {
-    padding-top: auto;
+  .yagf .display-md-hidden {
+    display: hidden;
   }
-  .yagf .padding-md-right-auto {
-    padding-right: auto;
-  }
-  .yagf .padding-md-bottom-auto {
-    padding-bottom: auto;
-  }
-  .yagf .padding-md-left-auto {
-    padding-left: auto;
-  }
-  .yagf .padding-md-0 {
-    padding: 0;
-  }
-  .yagf .padding-md-top-0 {
-    padding-top: 0;
-  }
-  .yagf .padding-md-right-0 {
-    padding-right: 0;
-  }
-  .yagf .padding-md-bottom-0 {
-    padding-bottom: 0;
-  }
-  .yagf .padding-md-left-0 {
-    padding-left: 0;
-  }
-  .yagf .padding-md-1rem {
-    padding: 1rem;
-  }
-  .yagf .padding-md-top-1rem {
-    padding-top: 1rem;
-  }
-  .yagf .padding-md-right-1rem {
-    padding-right: 1rem;
-  }
-  .yagf .padding-md-bottom-1rem {
-    padding-bottom: 1rem;
-  }
-  .yagf .padding-md-left-1rem {
-    padding-left: 1rem;
+  .yagf .display-md-none {
+    display: none;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .yagf .padding-lg-auto {
-    padding: auto;
+  .yagf .display-lg-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .yagf .padding-lg-top-auto {
-    padding-top: auto;
+  .yagf .display-lg-hidden {
+    display: hidden;
   }
-  .yagf .padding-lg-right-auto {
-    padding-right: auto;
-  }
-  .yagf .padding-lg-bottom-auto {
-    padding-bottom: auto;
-  }
-  .yagf .padding-lg-left-auto {
-    padding-left: auto;
-  }
-  .yagf .padding-lg-0 {
-    padding: 0;
-  }
-  .yagf .padding-lg-top-0 {
-    padding-top: 0;
-  }
-  .yagf .padding-lg-right-0 {
-    padding-right: 0;
-  }
-  .yagf .padding-lg-bottom-0 {
-    padding-bottom: 0;
-  }
-  .yagf .padding-lg-left-0 {
-    padding-left: 0;
-  }
-  .yagf .padding-lg-1rem {
-    padding: 1rem;
-  }
-  .yagf .padding-lg-top-1rem {
-    padding-top: 1rem;
-  }
-  .yagf .padding-lg-right-1rem {
-    padding-right: 1rem;
-  }
-  .yagf .padding-lg-bottom-1rem {
-    padding-bottom: 1rem;
-  }
-  .yagf .padding-lg-left-1rem {
-    padding-left: 1rem;
+  .yagf .display-lg-none {
+    display: none;
   }
 }

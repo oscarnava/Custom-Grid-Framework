@@ -25,6 +25,11 @@ $DIMENSION-RANGES: (
 $ROWS: (a,b,c);
 $GRID-MAX-COLS: 6;
 
+/* Padding parameters */
+
+$PADDINGS: ('top','right','bottom','left');
+$SPANS: ('auto', 0, 1rem, 1em, 10px);
+
 /**
 * Global functions & mixins
 **/

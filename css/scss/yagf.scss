@@ -1,5 +1,5 @@
 @import "defs";
-@import "reset";
+//@import "reset";
 
 //@include enableDebugging();
 
@@ -51,7 +51,8 @@
 
   // Include Bootstrap style rules.
 //@import 'bootstrap-ish';
-// @import 'grids-notation';
-@import 'padding';
+//@import 'grids-notation';
+//@import 'padding';
+  @import 'display';
 
 }
