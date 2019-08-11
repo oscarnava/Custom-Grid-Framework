@@ -1,0 +1,32 @@
+Alignment:
+  .position-{md|lg}-{top|vcenter|bottom|left|hcenter|right}
+
+Borders:
+  .border-{md|lg}
+  .border-{md|lg}-{top|right|bottom|left}
+  .round-box-{md|lg}-{2px|3px|...|10px}
+  .circle-{md|lg}
+  .border-{md|lg}-{0rem|1rem}
+
+Colors:
+* .bgcolor-{md|lg}-{aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|purple|red|silver|teal|white|yellow}
+* .txtcolor-{md|lg}-{aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|purple|red|silver|teal|white|yellow}
+  .border-color-{md|lg}-{aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|purple|red|silver|teal|white|yellow}
+
+Display:
+*  .display-{md|lg}-{flex|contents|none}
+
+Padding:
+*  .padding-{md|lg}-{0|1rem|1em|10px}
+*  .padding-{md|lg}-{top|right|bottom|left} {0|1rem|1em|10px}
+
+Utilities:
+*  .align-{md|lg}-{left|center|right}
+*  .fweight-{md|lg}-{bold|normal|medium}
+*  .fsize-{md|lg}-{10px|12px|14px|...|28px|30px}
+
+Row layout:
+* .col-{md|lg}-{start-column}-{end-column}
+
+Grid layout:
+* .range-{md|lg}-{a1...d6}-{a1...d6}  <= Note: The second reference should be located towards the RIGHT and BOTTOM of the first.

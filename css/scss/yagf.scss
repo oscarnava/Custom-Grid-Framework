@@ -1,0 +1,55 @@
+@import "defs";
+
+//@include enableDebugging();
+
+.yagf {
+
+  @if DEBUG {
+    & > div {
+      min-height: 100px;
+    }
+  }
+
+  @include mark(red) {
+    min-height: 100px;
+    margin: 2px;
+  }
+
+  .row {
+    @include mark(green);
+    display: grid;
+    grid-template-columns: repeat($MAX-COLS, 1fr);
+    grid-gap: 0;
+  }
+
+  .grid-mode {
+    @include mark(green);
+    display: grid;
+    grid-template-columns: repeat($GRID-MAX-COLS, 1fr);
+    grid-template-rows: repeat(length($ROWS), auto);
+    grid-gap: 0;
+  }
+
+
+
+  [class*="col-"] {
+    grid-column: 1 / span $MAX-COLS;
+    @include mark(rgba(18, 77, 103, 0.5), $gradient: true, $mesh: true) {
+      background-color: rgba(18, 77, 103, 0.5);
+      color: yellow;
+    }
+  }
+
+  [class*="range-"] {
+    grid-column: 1 / span $GRID-MAX-COLS;
+    @include mark(rgba(18, 77, 103, 0.5), $gradient: true, $mesh: true) {
+      background-color: rgba(18, 77, 103, 0.5);
+      color: yellow;
+    }
+  }
+
+  // Include Bootstrap style rules.
+  @import 'bootstrap-ish';
+  @import 'grids-notation';
+
+}

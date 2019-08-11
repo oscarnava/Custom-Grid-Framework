@@ -1,0 +1,40 @@
+// Border
+//  - The CSS files define separate classes for border top, bottom, left, right, all border
+//  - The border should span from 0 to 1rem
+//  - The border should have classes for making box round
+//  - The border should have a class defined to transform a box into a circle
+
+@each $name, $dimension-min, $dimension-max in $DIMENSION-RANGES {
+
+  // Generate rules for each dimension range
+  @media only screen and (min-width: $dimension-min) and (max-width: $dimension-max) {
+
+    @for $width from 0rem through 1rem {
+
+      .border-#{$name}-#{$width} {
+        border-width: $width;
+        border-style: solid;
+      }
+
+      @each $direction in $BORDER-DIRS {
+
+        .border-#{$name}-#{$direction}-#{$width} {
+          border-#{$direction}-width: $width;
+          border-#{$direction}-style: solid;
+        }
+
+      }
+    }
+
+    @for $radius from 2px through 10px {
+      .round-box-#{$name}-#{$radius} {
+        border-radius: $radius;
+      }
+    }
+
+    .circle-#{$name} {
+      border-radius: 50%;
+    }
+
+  }
+}

@@ -1,0 +1,20 @@
+// At least ten different classes to set the background and text colors of an element
+
+@each $name, $dimension-min, $dimension-max in $DIMENSION-RANGES {
+  @media only screen and (min-width: $dimension-min) and (max-width: $dimension-max) {
+    @each $color-name in $COLORS {
+
+      .bgcolor-#{$name}-#{$color-name} {
+        background-color: $color-name;
+      }
+
+      .txtcolor-#{$name}-#{$color-name} {
+        color: $color-name;
+      }
+
+      .border-color-#{$name}-#{$color-name} {
+        border-color: $color-name;
+      }
+    }
+  }
+}

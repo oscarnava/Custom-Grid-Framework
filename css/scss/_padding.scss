@@ -1,0 +1,16 @@
+@each $name, $dimension-min, $dimension-max in $DIMENSION-RANGES {
+
+  // Generate rules for each dimension range
+  @media only screen and (min-width: $dimension-min) and (max-width: $dimension-max) {
+      @each $span in $SPANS {
+          .padding-#{$name}-#{$span} {
+              padding: #{$span}
+          }
+          @each $padding in $PADDINGS {
+              .padding-#{$name}-#{$padding}-#{$span} {
+                  padding-#{$padding}: #{$span}
+              }
+          }
+      }
+  }
+}

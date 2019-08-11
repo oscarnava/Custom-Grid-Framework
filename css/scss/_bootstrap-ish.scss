@@ -1,0 +1,50 @@
+/*******************************************************
+ *   Generate rules for a Bootstrap style behaviour.
+ ******************************************************/
+
+$dimIndex: 0; // This will be a numeric index of the dimension. Used only for color generation.
+@each $name, $dimension-min, $dimension-max in $DIMENSION-RANGES {
+
+  // Generate rules for each dimension range
+  @media only screen and (min-width: $dimension-min) {
+
+    // Generate rules for each column pair. Notation is:
+    //
+    //   col-{dim}-{from}-{to}
+    //
+    // Where:
+    //   dim : Is the dimension name (i.e.: sm, md, lg, xl)
+    //   from: Is the starting column index (numeric, from 1 to $MAX-COLS inclusive).
+    //   to  : Is the ending column index (numeric, from 'from' value to $MAX-COLS inclusive).
+
+    @for $lt from 1 through $MAX-COLS {
+      @for $rt from $lt through $MAX-COLS {
+
+        // Generate a color specific to each selector and dimension.
+        $color: rgb($lt * 255 / $MAX-COLS, $rt * 255 / $MAX-COLS, 255 * $dimIndex / 3);
+
+        .col-#{$name}-#{$lt}-#{$rt} {
+          grid-column: #{$lt} / ($rt + 1);
+          grid-row: 1 / 1;
+          @include mark($color, $gradient: true, $mesh: true) {
+            background-color: $color;
+            color: if(lightness($color) < 50%, white, black);
+          }
+
+          @if $DEBUG {
+            &:hover {
+              background-image: none;
+              background-color: complement($color);
+              transition-property: background-color;
+              transition-duration: .5s;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  $dimIndex: $dimIndex + 1;
+
+}

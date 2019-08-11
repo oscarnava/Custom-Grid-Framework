@@ -1,0 +1,83 @@
+h1 {
+  font-family: serif;
+}
+
+h2 {
+  font-family: monospace;
+  margin-bottom: 20px;
+}
+
+.cell {
+/*  display: flex;*/
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 3px solid rgba(128, 128, 128, 0.3);
+  padding: 10px;
+}
+
+body {
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+.size-cell {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.demo-body {
+  min-height: 20em;
+}
+
+.demo-head {
+  max-height: 2em;
+}
+
+.demo-foot {
+  max-height: 2em;
+}
+
+p {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 16px;
+  padding: 1em 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav {
+  font-family: monospace;
+  font-size: 48px;
+}
+
+footer {
+  font-family: cursive;
+  font-size: 32px;
+}
+
+.cell1 {
+  background-color: #222;
+  color: white
+}
+
+.cell2 {
+  background-color: #555;
+  color: white
+}
+
+.cell3 {
+  background-color: #999;
+  color: black;
+}
+
+.cell4 {
+  background-color: #ccc;
+  color: black;
+}

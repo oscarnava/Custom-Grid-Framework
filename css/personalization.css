@@ -1,0 +1,810 @@
+/**
+* Global definitions
+**/
+/*
+*   Requirements:
+*     + Breakpoint for small screens with a width of up to 720px
+*     + Breakpoint for medium screens with a width in the range of 720px - 1024px
+*     + Breakpoint for large screens with width above 1024px
+*/
+/*grid notation variables and constants*/
+/* Padding parameters */
+/* Border parameters */
+/* Colors parameters */
+/* Alignment parameters */
+/* Display parameters */
+/* Utilities parameters */
+/**
+* Global functions & mixins
+**/
+/*
+* This mixin will just enable or disable some features when debugging; those
+* features should be disabled by default
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
+  .padding-md-0 {
+    padding: 0; }
+
+  .padding-md-top-0 {
+    padding-top: 0; }
+
+  .padding-md-right-0 {
+    padding-right: 0; }
+
+  .padding-md-bottom-0 {
+    padding-bottom: 0; }
+
+  .padding-md-left-0 {
+    padding-left: 0; }
+
+  .padding-md-1rem {
+    padding: 1rem; }
+
+  .padding-md-top-1rem {
+    padding-top: 1rem; }
+
+  .padding-md-right-1rem {
+    padding-right: 1rem; }
+
+  .padding-md-bottom-1rem {
+    padding-bottom: 1rem; }
+
+  .padding-md-left-1rem {
+    padding-left: 1rem; }
+
+  .padding-md-1em {
+    padding: 1em; }
+
+  .padding-md-top-1em {
+    padding-top: 1em; }
+
+  .padding-md-right-1em {
+    padding-right: 1em; }
+
+  .padding-md-bottom-1em {
+    padding-bottom: 1em; }
+
+  .padding-md-left-1em {
+    padding-left: 1em; }
+
+  .padding-md-10px {
+    padding: 10px; }
+
+  .padding-md-top-10px {
+    padding-top: 10px; }
+
+  .padding-md-right-10px {
+    padding-right: 10px; }
+
+  .padding-md-bottom-10px {
+    padding-bottom: 10px; }
+
+  .padding-md-left-10px {
+    padding-left: 10px; } }
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
+  .padding-lg-0 {
+    padding: 0; }
+
+  .padding-lg-top-0 {
+    padding-top: 0; }
+
+  .padding-lg-right-0 {
+    padding-right: 0; }
+
+  .padding-lg-bottom-0 {
+    padding-bottom: 0; }
+
+  .padding-lg-left-0 {
+    padding-left: 0; }
+
+  .padding-lg-1rem {
+    padding: 1rem; }
+
+  .padding-lg-top-1rem {
+    padding-top: 1rem; }
+
+  .padding-lg-right-1rem {
+    padding-right: 1rem; }
+
+  .padding-lg-bottom-1rem {
+    padding-bottom: 1rem; }
+
+  .padding-lg-left-1rem {
+    padding-left: 1rem; }
+
+  .padding-lg-1em {
+    padding: 1em; }
+
+  .padding-lg-top-1em {
+    padding-top: 1em; }
+
+  .padding-lg-right-1em {
+    padding-right: 1em; }
+
+  .padding-lg-bottom-1em {
+    padding-bottom: 1em; }
+
+  .padding-lg-left-1em {
+    padding-left: 1em; }
+
+  .padding-lg-10px {
+    padding: 10px; }
+
+  .padding-lg-top-10px {
+    padding-top: 10px; }
+
+  .padding-lg-right-10px {
+    padding-right: 10px; }
+
+  .padding-lg-bottom-10px {
+    padding-bottom: 10px; }
+
+  .padding-lg-left-10px {
+    padding-left: 10px; } }
+/*
+For display should have a class for each
+  A class to set the display property of an element to flex
+  A class to set the display property to hidden
+  A class to set the display property to none
+  The none class should have breakpoints (example display-md-none)
+*/
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
+  .display-md-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+  .display-md-contents {
+    display: contents; }
+
+  .display-md-none {
+    display: none; } }
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
+  .display-lg-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+  .display-lg-contents {
+    display: contents; }
+
+  .display-lg-none {
+    display: none; } }
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
+  .position-md-top {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+
+  .position-md-vcenter {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+  .position-md-bottom {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+
+  .position-md-left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+
+  .position-md-hcenter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+  .position-md-right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; } }
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
+  .position-lg-top {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+
+  .position-lg-vcenter {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+  .position-lg-bottom {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+
+  .position-lg-left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+
+  .position-lg-hcenter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+  .position-lg-right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; } }
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
+  .bgcolor-md-aqua {
+    background-color: aqua; }
+
+  .txtcolor-md-aqua {
+    color: aqua; }
+
+  .border-color-md-aqua {
+    border-color: aqua; }
+
+  .bgcolor-md-black {
+    background-color: black; }
+
+  .txtcolor-md-black {
+    color: black; }
+
+  .border-color-md-black {
+    border-color: black; }
+
+  .bgcolor-md-blue {
+    background-color: blue; }
+
+  .txtcolor-md-blue {
+    color: blue; }
+
+  .border-color-md-blue {
+    border-color: blue; }
+
+  .bgcolor-md-fuchsia {
+    background-color: fuchsia; }
+
+  .txtcolor-md-fuchsia {
+    color: fuchsia; }
+
+  .border-color-md-fuchsia {
+    border-color: fuchsia; }
+
+  .bgcolor-md-gray {
+    background-color: gray; }
+
+  .txtcolor-md-gray {
+    color: gray; }
+
+  .border-color-md-gray {
+    border-color: gray; }
+
+  .bgcolor-md-green {
+    background-color: green; }
+
+  .txtcolor-md-green {
+    color: green; }
+
+  .border-color-md-green {
+    border-color: green; }
+
+  .bgcolor-md-lime {
+    background-color: lime; }
+
+  .txtcolor-md-lime {
+    color: lime; }
+
+  .border-color-md-lime {
+    border-color: lime; }
+
+  .bgcolor-md-maroon {
+    background-color: maroon; }
+
+  .txtcolor-md-maroon {
+    color: maroon; }
+
+  .border-color-md-maroon {
+    border-color: maroon; }
+
+  .bgcolor-md-navy {
+    background-color: navy; }
+
+  .txtcolor-md-navy {
+    color: navy; }
+
+  .border-color-md-navy {
+    border-color: navy; }
+
+  .bgcolor-md-olive {
+    background-color: olive; }
+
+  .txtcolor-md-olive {
+    color: olive; }
+
+  .border-color-md-olive {
+    border-color: olive; }
+
+  .bgcolor-md-purple {
+    background-color: purple; }
+
+  .txtcolor-md-purple {
+    color: purple; }
+
+  .border-color-md-purple {
+    border-color: purple; }
+
+  .bgcolor-md-red {
+    background-color: red; }
+
+  .txtcolor-md-red {
+    color: red; }
+
+  .border-color-md-red {
+    border-color: red; }
+
+  .bgcolor-md-silver {
+    background-color: silver; }
+
+  .txtcolor-md-silver {
+    color: silver; }
+
+  .border-color-md-silver {
+    border-color: silver; }
+
+  .bgcolor-md-teal {
+    background-color: teal; }
+
+  .txtcolor-md-teal {
+    color: teal; }
+
+  .border-color-md-teal {
+    border-color: teal; }
+
+  .bgcolor-md-white {
+    background-color: white; }
+
+  .txtcolor-md-white {
+    color: white; }
+
+  .border-color-md-white {
+    border-color: white; }
+
+  .bgcolor-md-yellow {
+    background-color: yellow; }
+
+  .txtcolor-md-yellow {
+    color: yellow; }
+
+  .border-color-md-yellow {
+    border-color: yellow; } }
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
+  .bgcolor-lg-aqua {
+    background-color: aqua; }
+
+  .txtcolor-lg-aqua {
+    color: aqua; }
+
+  .border-color-lg-aqua {
+    border-color: aqua; }
+
+  .bgcolor-lg-black {
+    background-color: black; }
+
+  .txtcolor-lg-black {
+    color: black; }
+
+  .border-color-lg-black {
+    border-color: black; }
+
+  .bgcolor-lg-blue {
+    background-color: blue; }
+
+  .txtcolor-lg-blue {
+    color: blue; }
+
+  .border-color-lg-blue {
+    border-color: blue; }
+
+  .bgcolor-lg-fuchsia {
+    background-color: fuchsia; }
+
+  .txtcolor-lg-fuchsia {
+    color: fuchsia; }
+
+  .border-color-lg-fuchsia {
+    border-color: fuchsia; }
+
+  .bgcolor-lg-gray {
+    background-color: gray; }
+
+  .txtcolor-lg-gray {
+    color: gray; }
+
+  .border-color-lg-gray {
+    border-color: gray; }
+
+  .bgcolor-lg-green {
+    background-color: green; }
+
+  .txtcolor-lg-green {
+    color: green; }
+
+  .border-color-lg-green {
+    border-color: green; }
+
+  .bgcolor-lg-lime {
+    background-color: lime; }
+
+  .txtcolor-lg-lime {
+    color: lime; }
+
+  .border-color-lg-lime {
+    border-color: lime; }
+
+  .bgcolor-lg-maroon {
+    background-color: maroon; }
+
+  .txtcolor-lg-maroon {
+    color: maroon; }
+
+  .border-color-lg-maroon {
+    border-color: maroon; }
+
+  .bgcolor-lg-navy {
+    background-color: navy; }
+
+  .txtcolor-lg-navy {
+    color: navy; }
+
+  .border-color-lg-navy {
+    border-color: navy; }
+
+  .bgcolor-lg-olive {
+    background-color: olive; }
+
+  .txtcolor-lg-olive {
+    color: olive; }
+
+  .border-color-lg-olive {
+    border-color: olive; }
+
+  .bgcolor-lg-purple {
+    background-color: purple; }
+
+  .txtcolor-lg-purple {
+    color: purple; }
+
+  .border-color-lg-purple {
+    border-color: purple; }
+
+  .bgcolor-lg-red {
+    background-color: red; }
+
+  .txtcolor-lg-red {
+    color: red; }
+
+  .border-color-lg-red {
+    border-color: red; }
+
+  .bgcolor-lg-silver {
+    background-color: silver; }
+
+  .txtcolor-lg-silver {
+    color: silver; }
+
+  .border-color-lg-silver {
+    border-color: silver; }
+
+  .bgcolor-lg-teal {
+    background-color: teal; }
+
+  .txtcolor-lg-teal {
+    color: teal; }
+
+  .border-color-lg-teal {
+    border-color: teal; }
+
+  .bgcolor-lg-white {
+    background-color: white; }
+
+  .txtcolor-lg-white {
+    color: white; }
+
+  .border-color-lg-white {
+    border-color: white; }
+
+  .bgcolor-lg-yellow {
+    background-color: yellow; }
+
+  .txtcolor-lg-yellow {
+    color: yellow; }
+
+  .border-color-lg-yellow {
+    border-color: yellow; } }
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
+  .align-md-left {
+    text-align: left; }
+
+  .align-md-center {
+    text-align: center; }
+
+  .align-md-right {
+    text-align: right; }
+
+  .fweight-md-bold {
+    font-weight: 700; }
+
+  .fweight-md-normal {
+    font-weight: 400; }
+
+  .fweight-md-medium {
+    font-weight: 500; }
+
+  .fsize-md-10px {
+    font-size: 10px; }
+
+  .fsize-md-12px {
+    font-size: 12px; }
+
+  .fsize-md-14px {
+    font-size: 14px; }
+
+  .fsize-md-16px {
+    font-size: 16px; }
+
+  .fsize-md-18px {
+    font-size: 18px; }
+
+  .fsize-md-20px {
+    font-size: 20px; }
+
+  .fsize-md-22px {
+    font-size: 22px; }
+
+  .fsize-md-24px {
+    font-size: 24px; }
+
+  .fsize-md-26px {
+    font-size: 26px; }
+
+  .fsize-md-28px {
+    font-size: 28px; }
+
+  .fsize-md-30px {
+    font-size: 30px; } }
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
+  .align-lg-left {
+    text-align: left; }
+
+  .align-lg-center {
+    text-align: center; }
+
+  .align-lg-right {
+    text-align: right; }
+
+  .fweight-lg-bold {
+    font-weight: 700; }
+
+  .fweight-lg-normal {
+    font-weight: 400; }
+
+  .fweight-lg-medium {
+    font-weight: 500; }
+
+  .fsize-lg-10px {
+    font-size: 10px; }
+
+  .fsize-lg-12px {
+    font-size: 12px; }
+
+  .fsize-lg-14px {
+    font-size: 14px; }
+
+  .fsize-lg-16px {
+    font-size: 16px; }
+
+  .fsize-lg-18px {
+    font-size: 18px; }
+
+  .fsize-lg-20px {
+    font-size: 20px; }
+
+  .fsize-lg-22px {
+    font-size: 22px; }
+
+  .fsize-lg-24px {
+    font-size: 24px; }
+
+  .fsize-lg-26px {
+    font-size: 26px; }
+
+  .fsize-lg-28px {
+    font-size: 28px; }
+
+  .fsize-lg-30px {
+    font-size: 30px; } }
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
+  .border-md-0rem {
+    border-width: 0rem;
+    border-style: solid; }
+
+  .border-md-top-0rem {
+    border-top-width: 0rem;
+    border-top-style: solid; }
+
+  .border-md-right-0rem {
+    border-right-width: 0rem;
+    border-right-style: solid; }
+
+  .border-md-bottom-0rem {
+    border-bottom-width: 0rem;
+    border-bottom-style: solid; }
+
+  .border-md-left-0rem {
+    border-left-width: 0rem;
+    border-left-style: solid; }
+
+  .border-md-1rem {
+    border-width: 1rem;
+    border-style: solid; }
+
+  .border-md-top-1rem {
+    border-top-width: 1rem;
+    border-top-style: solid; }
+
+  .border-md-right-1rem {
+    border-right-width: 1rem;
+    border-right-style: solid; }
+
+  .border-md-bottom-1rem {
+    border-bottom-width: 1rem;
+    border-bottom-style: solid; }
+
+  .border-md-left-1rem {
+    border-left-width: 1rem;
+    border-left-style: solid; }
+
+  .round-box-md-2px {
+    border-radius: 2px; }
+
+  .round-box-md-3px {
+    border-radius: 3px; }
+
+  .round-box-md-4px {
+    border-radius: 4px; }
+
+  .round-box-md-5px {
+    border-radius: 5px; }
+
+  .round-box-md-6px {
+    border-radius: 6px; }
+
+  .round-box-md-7px {
+    border-radius: 7px; }
+
+  .round-box-md-8px {
+    border-radius: 8px; }
+
+  .round-box-md-9px {
+    border-radius: 9px; }
+
+  .round-box-md-10px {
+    border-radius: 10px; }
+
+  .circle-md {
+    border-radius: 50%; } }
+@media only screen and (min-width: 1024px) and (max-width: 99999px) {
+  .border-lg-0rem {
+    border-width: 0rem;
+    border-style: solid; }
+
+  .border-lg-top-0rem {
+    border-top-width: 0rem;
+    border-top-style: solid; }
+
+  .border-lg-right-0rem {
+    border-right-width: 0rem;
+    border-right-style: solid; }
+
+  .border-lg-bottom-0rem {
+    border-bottom-width: 0rem;
+    border-bottom-style: solid; }
+
+  .border-lg-left-0rem {
+    border-left-width: 0rem;
+    border-left-style: solid; }
+
+  .border-lg-1rem {
+    border-width: 1rem;
+    border-style: solid; }
+
+  .border-lg-top-1rem {
+    border-top-width: 1rem;
+    border-top-style: solid; }
+
+  .border-lg-right-1rem {
+    border-right-width: 1rem;
+    border-right-style: solid; }
+
+  .border-lg-bottom-1rem {
+    border-bottom-width: 1rem;
+    border-bottom-style: solid; }
+
+  .border-lg-left-1rem {
+    border-left-width: 1rem;
+    border-left-style: solid; }
+
+  .round-box-lg-2px {
+    border-radius: 2px; }
+
+  .round-box-lg-3px {
+    border-radius: 3px; }
+
+  .round-box-lg-4px {
+    border-radius: 4px; }
+
+  .round-box-lg-5px {
+    border-radius: 5px; }
+
+  .round-box-lg-6px {
+    border-radius: 6px; }
+
+  .round-box-lg-7px {
+    border-radius: 7px; }
+
+  .round-box-lg-8px {
+    border-radius: 8px; }
+
+  .round-box-lg-9px {
+    border-radius: 9px; }
+
+  .round-box-lg-10px {
+    border-radius: 10px; }
+
+  .circle-lg {
+    border-radius: 50%; } }

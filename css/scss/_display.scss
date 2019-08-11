@@ -1,0 +1,21 @@
+/*
+For display should have a class for each
+  A class to set the display property of an element to flex
+  A class to set the display property to hidden
+  A class to set the display property to none
+  The none class should have breakpoints (example display-md-none)
+*/
+
+//TODO: Add display rules to fix an element to the top-left, top-right, bottom-left, bottom-right
+
+@each $name, $dimension-min, $dimension-max in $DIMENSION-RANGES {
+
+  // Generate rules for each dimension range
+  @media only screen and (min-width: $dimension-min) and (max-width: $dimension-max) {
+    @each $display in $DISPLAYS {
+      .display-#{$name}-#{$display} {
+        display: #{$display};
+      }
+    }
+  }
+}
