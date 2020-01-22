@@ -9,4 +9,4 @@ In this mode, the selectors work in a similar manner to Bootstrap (rows divided 
 In this mode, the container is divided in a grid 6 columns width by 3 rows height. You can select a range in this grid using an Excel-like syntax, i.e.: **range-md-a1-b2** will select the top left four cells in medium resolution and **range-lg-b5-c6** will select the bottom right four cells in large resolutions.
 To compensate for the three row limit you can either nest grids into grids, or you can change the corresponding values in the defs.sass segment and recompile the code.
 
-[Demo Live preview](https://oscarnava.github.io/custom-grid-framework/)
+[Demo Live preview](https://oscarnava.github.io/Custom-Grid-Framework/)
